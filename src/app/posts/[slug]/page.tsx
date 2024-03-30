@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import { CMS_NAME } from "@/lib/constants";
+import { BASE, CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Alert from "@/app/_components/alert";
 import Container from "@/app/_components/container";
@@ -53,6 +53,7 @@ export function generateMetadata({ params }: Params): Metadata {
   const title = `${post.title} | Aaron Stanley King`;
 
   return {
+    metadataBase: new URL(BASE + "/posts/" + post.slug),
     title,
     openGraph: {
       title,

@@ -1,5 +1,5 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { BASE, CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -8,6 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE),
   title: `Aaron Stanley King`,
   description: `Aaron Stanley King is a husband, father, and web developer who is always looking to learn new things and solve problems.`,
   openGraph: {
