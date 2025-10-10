@@ -9,7 +9,7 @@ featured: false
 
 # .NET Maui and VS Code
 
-![.NET MAUI and VS Code development setup](https://blogger.googleusercontent.com/img/a/AVvXsEhZcuyd0JV0j4HZdFMFgfzeRw-s_2rzg-C6nCYCYWpN1UwziSwt_duMyeZXUyIH3Ww5CczVJ4XHSYiO-GTzGBjgcLwZNjDH01KufLZFVgQP9Ml-ZbJgLSOySXL-HuhRhWT9fIdjj5VxnT1akp-PuPOz6D3m5n4AuUWePdSCA4PqZSwCte3LX3yl9UBK)
+![.NET MAUI and VS Code development setup](/images/posts/dotnet-maui-vs-code.jpg)
 
 I was disappointed in the developer experience for .NET Maui and Visual Studio Code. I assumed that the popular debuggers and extensions would cover getting an app running. I am always up to date on my .NET and Visual Studio and Visual Studio Code so I just figured the tooling would be there. When the marketplace didn't really reveal a solution for me, I went searching.
 

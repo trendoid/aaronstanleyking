@@ -9,7 +9,7 @@ featured: true
 
 # Review of the 14‑inch MacBook Pro in Space Gray
 
-![My new MacBook Pro 14 inch](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsNTvQ6Im3HN3EHQKgZyaEZJslgb4yzar6fapDW6H_Mus9vkqQeVfTzsTm_6xY_3tsdEj5GLH2XllK2G6ZEEqXP0_phDpinVrnegnKiViIZP2x9z5jQjvBD58nHGZ6I2um9f0Fk10wpTYRRoNQ9dC3Efbmdw_AD8X42GKzsw8ySYuOQRnCzW6dxHAw/s4032/IMG_2803.jpeg)
+![My new MacBook Pro 14 inch](/images/posts/macbook-pro-14-inch.jpeg)
 
 Here is an HONEST review of the MacBook Pro from a dotNet developer and long time Windows user. When I say honest, I mean it. I bought this with my own money for my personal laptop. This wasn't for work or sponsored in any way.
 

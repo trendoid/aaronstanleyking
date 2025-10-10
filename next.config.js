@@ -6,14 +6,6 @@ const nextConfig = {
   distDir: 'out',
   images: {
     unoptimized: true,
-    domains: ['blogger.googleusercontent.com'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'blogger.googleusercontent.com',
-        pathname: '/img/**',
-      },
-    ],
   }
 }
 

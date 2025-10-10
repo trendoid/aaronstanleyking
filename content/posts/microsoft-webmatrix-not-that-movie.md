@@ -9,7 +9,7 @@ featured: false
 
 # Microsoft WebMatrix - not that movie with Keanu Reeves
 
-![ASP.NET WebMatrix logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwsjhuWAEdWM33KtNZu6lCK1mCXX3_Vfxkv2rq2I6tWhPB-pFiUYHTxNm8pPTPTp7WdY-zRZ123WEde6CsyoWJb-eiF5QH5vMqU217yfIxc1FlDSQJ9Fqc3ZqNurOiKK7NocLrCa6Fz0Y/s1600/aspwebmatrix.gif)
+![ASP.NET WebMatrix logo](/images/posts/aspnet-webmatrix-logo.gif)
 
 I thought this yesterday when [ScottGu](https://weblogs.asp.net/scottgu/archive/2010/07/06/introducing-webmatrix.aspx) brought it out into the open, but didn't say anything. I didn't want to make myself sound old.
 
