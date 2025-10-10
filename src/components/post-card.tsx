@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { BlogPostMetadata } from '@/lib/blog'
 import { formatDate } from '@/lib/utils'
 import { Calendar, Clock, User, Tag } from 'lucide-react'
@@ -10,12 +11,28 @@ interface PostCardProps {
 
 export function PostCard({ post, featured = false }: PostCardProps) {
   const cardClasses = featured
-    ? 'bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow duration-300'
-    : 'bg-white rounded-lg shadow-md border border-gray-200 p-4 hover:shadow-lg transition-shadow duration-300'
+    ? 'bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300'
+    : 'bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300'
 
   return (
     <article className={cardClasses}>
-      <div className="space-y-3">
+      {post.image && (
+        <div className="relative">
+          <Link href={`/blog/${post.slug}`}>
+            <div className={`relative ${featured ? 'h-48' : 'h-32'} w-full`}>
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          </Link>
+        </div>
+      )}
+      
+      <div className={post.image ? 'p-6' : 'space-y-3 p-6'}>
         {featured && (
           <div className="flex items-center">
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">

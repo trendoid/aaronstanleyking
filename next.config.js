@@ -5,7 +5,15 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   distDir: 'out',
   images: {
-    unoptimized: true
+    unoptimized: true,
+    domains: ['blogger.googleusercontent.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'blogger.googleusercontent.com',
+        pathname: '/img/**',
+      },
+    ],
   }
 }
 

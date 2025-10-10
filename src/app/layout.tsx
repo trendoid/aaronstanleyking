@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description: "A modern blog about web development, cloud computing, and technology built with Next.js, Storybook, and Azure Static Web Apps.",
   keywords: ["blog", "web development", "nextjs", "azure", "storybook", "typescript"],
   authors: [{ name: "Aaron Stanley King" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Aaron Stanley King - Blog",
     description: "A modern blog about web development, cloud computing, and technology",

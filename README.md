@@ -53,7 +53,23 @@ npm run storybook
 
 Open [http://localhost:6006](http://localhost:6006) to view Storybook.
 
-## 📝 Adding Blog Posts
+## 📝 Blog Content
+
+This blog includes migrated content from the original Blogger site at www.aaronstanleyking.com, plus new posts written specifically for this Next.js platform.
+
+### Migrated Posts
+
+The following posts were successfully migrated from Blogger:
+- **Review of the 14‑inch MacBook Pro in Space Gray** (2024)
+- **Why I won't be registering as a blogger in the state of Florida** (2023)
+- **.NET Maui and VS Code** (2022)
+- **Special Characters are Truly Special** (2022)
+- **Cool new stream about F# from LaylaCodesIt** (2021)
+- **Use Free Certificates. Always Use a Certificate.** (2021)
+
+See [MIGRATION.md](MIGRATION.md) for details on the migration process.
+
+### Adding New Posts
 
 1. Create a new `.md` file in `content/posts/`
 2. Add frontmatter with required fields:
@@ -63,7 +79,7 @@ Open [http://localhost:6006](http://localhost:6006) to view Storybook.
 title: "Your Post Title"
 excerpt: "A brief description of your post"
 date: "2024-10-10"
-author: "Author Name"
+author: "Aaron Stanley King"
 tags: ["tag1", "tag2"]
 featured: false
 ---

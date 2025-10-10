@@ -13,6 +13,7 @@ export interface BlogPost {
   tags: string[]
   featured: boolean
   content: string
+  image?: string
 }
 
 export interface BlogPostMetadata {
@@ -23,9 +24,17 @@ export interface BlogPostMetadata {
   author: string
   tags: string[]
   featured: boolean
+  image?: string
 }
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
+
+function extractFirstImage(content: string): string | undefined {
+  // Look for the first image in markdown format ![alt](url)
+  const imageRegex = /!\[[^\]]*\]\(([^)]+)\)/
+  const match = imageRegex.exec(content)
+  return match ? match[1] : undefined
+}
 
 export function getAllPostSlugs(): string[] {
   if (!fs.existsSync(postsDirectory)) {
@@ -58,6 +67,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       tags: data.tags || [],
       featured: data.featured || false,
       content,
+      image: extractFirstImage(content),
     }
   } catch (error) {
     console.error(`Error reading post ${slug}:`, error)

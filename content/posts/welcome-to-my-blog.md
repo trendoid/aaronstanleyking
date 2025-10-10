@@ -9,6 +9,8 @@ featured: true
 
 # Welcome to My Blog
 
+![Welcome to my developer blog](https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80)
+
 Hello and welcome to my new blog! This is built with **Next.js 14**, styled with **Tailwind CSS**, documented with **Storybook**, and hosted on **Azure Static Web Apps**.
 
 ## What You'll Find Here
