@@ -2,7 +2,9 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Layout } from '@/components/layout'
 import { Button } from '@/components/ui/button'
+import { Schema } from '@/components/schema'
 import { getPostBySlug, getAllPostSlugs, markdownToHtml } from '@/lib/blog'
+import { getArticleSchema, getBreadcrumbSchema, getWordCount } from '@/lib/schema'
 import { formatDate, getReadingTime } from '@/lib/utils'
 import { Calendar, Clock, User, Tag, ArrowLeft, Share2 } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -54,9 +56,32 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const contentHtml = await markdownToHtml(post.content)
   const readingTime = getReadingTime(post.content)
+  const wordCount = getWordCount(post.content)
+  
+  // Create metadata without content for schema
+  const postMetadata = {
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    author: post.author,
+    tags: post.tags,
+    featured: post.featured,
+    image: post.image
+  }
+  
+  const articleSchema = getArticleSchema(postMetadata, wordCount)
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.aaronstanleyking.com' },
+    { name: 'Blog', url: 'https://www.aaronstanleyking.com/blog' },
+    { name: post.title }
+  ])
 
   return (
-    <Layout>
+    <>
+      <Schema schema={articleSchema} />
+      <Schema schema={breadcrumbSchema} />
+      <Layout>
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
         <div className="mb-8">
@@ -164,5 +189,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </footer>
       </article>
     </Layout>
+    </>
   )
 }

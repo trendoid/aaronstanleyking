@@ -1,16 +1,27 @@
 import Link from 'next/link'
 import { Layout } from '@/components/layout'
 import { PostCard } from '@/components/post-card'
+import { Schema } from '@/components/schema'
 import { getAllPosts, getFeaturedPosts, getAllTags } from '@/lib/blog'
+import { getBlogSchema, getBreadcrumbSchema } from '@/lib/schema'
 import { Search, Tag, BookOpen } from 'lucide-react'
 
 export default function BlogPage() {
   const allPosts = getAllPosts()
   const featuredPosts = getFeaturedPosts()
   const allTags = getAllTags()
+  
+  const blogSchema = getBlogSchema()
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.aaronstanleyking.com' },
+    { name: 'Blog' }
+  ])
 
   return (
-    <Layout>
+    <>
+      <Schema schema={blogSchema} />
+      <Schema schema={breadcrumbSchema} />
+      <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,5 +128,6 @@ export default function BlogPage() {
         </div>
       </div>
     </Layout>
+    </>
   )
 }

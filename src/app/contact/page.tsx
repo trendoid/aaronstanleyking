@@ -1,6 +1,8 @@
 import { Layout } from '@/components/layout'
 import { Button } from '@/components/ui/button'
+import { Schema } from '@/components/schema'
 import { Mail, MessageCircle, Calendar, MapPin } from 'lucide-react'
+import { getPersonSchema, getBreadcrumbSchema } from '@/lib/schema'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -9,6 +11,12 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const personSchema = getPersonSchema()
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.aaronstanleyking.com' },
+    { name: 'Contact' }
+  ])
+  
   const contactMethods = [
     {
       name: 'Email',
@@ -37,7 +45,10 @@ export default function ContactPage() {
   ]
 
   return (
-    <Layout>
+    <>
+      <Schema schema={personSchema} />
+      <Schema schema={breadcrumbSchema} />
+      <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,5 +176,6 @@ export default function ContactPage() {
         </div>
       </div>
     </Layout>
+    </>
   )
 }

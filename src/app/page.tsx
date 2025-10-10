@@ -2,15 +2,25 @@ import Link from 'next/link'
 import { Layout } from '@/components/layout'
 import { PostCard } from '@/components/post-card'
 import { Button } from '@/components/ui/button'
+import { Schema } from '@/components/schema'
 import { getAllPosts, getFeaturedPosts } from '@/lib/blog'
+import { getWebSiteSchema, getBreadcrumbSchema } from '@/lib/schema'
 import { BookOpen, ArrowRight, Code, Cloud, Layers } from 'lucide-react'
 
 export default function Home() {
   const featuredPosts = getFeaturedPosts()
   const recentPosts = getAllPosts().slice(0, 3)
+  
+  const websiteSchema = getWebSiteSchema()
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.aaronstanleyking.com' }
+  ])
 
   return (
-    <Layout>
+    <>
+      <Schema schema={websiteSchema} />
+      <Schema schema={breadcrumbSchema} />
+      <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -125,5 +135,6 @@ export default function Home() {
         </div>
       </section>
     </Layout>
+    </>
   )
 }
