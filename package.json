@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "npm run build-storybook && next build --turbopack",
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "swa:build": "npx swa build",
+    "build-storybook": "storybook build -o public/storybook",
+    "swa:build": "npm run build-storybook && npx swa build",
     "swa:start": "npx swa start",
     "swa:deploy": "npx swa deploy --env production",
     "export": "next build && next export"

@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     description: "A modern blog about web development, cloud computing, and technology",
     type: "website",
   },
+  alternates: {
+    types: {
+      'application/rss+xml': [{ url: '/rss.xml', title: 'Aaron Stanley King - Blog RSS Feed' }],
+    },
+  },
 };
 
 export default function RootLayout({

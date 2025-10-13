@@ -31,7 +31,7 @@ export function Footer() {
     {
       title: 'Resources',
       links: [
-        { name: 'Storybook', href: '/storybook' },
+        { name: 'Storybook', href: '/storybook/index.html' },
         { name: 'RSS Feed', href: '/rss.xml' },
         { name: 'Sitemap', href: '/sitemap.xml' },
       ],
