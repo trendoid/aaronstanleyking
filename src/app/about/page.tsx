@@ -103,7 +103,7 @@ export default function AboutPage() {
             {technologies.map((tech) => {
               const Icon = tech.icon
               return (
-                <div key={tech.name} className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                <div key={tech.name} className="text-center p-6 rounded-lg shadow-md border border-gray-200">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-blue-600" />
                   </div>
@@ -118,7 +118,7 @@ export default function AboutPage() {
         {/* Skills Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Technologies & Skills</h2>
-          <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+          <div className="rounded-lg shadow-md border border-gray-200 p-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {skills.map((skill) => (
                 <div

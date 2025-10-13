@@ -1,13 +1,13 @@
 import type { Preview } from '@storybook/nextjs-vite'
-import { withThemeByDataAttribute } from "@storybook/addon-themes";
+import { withThemeByClassName } from "@storybook/addon-themes";
 import '../src/app/globals.css'
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
     backgrounds: {
@@ -65,15 +65,14 @@ const preview: Preview = {
     }
   },
   decorators: [
-          withThemeByDataAttribute({
-            defaultTheme: "light",
-            themes: {
-                light: "light",
-                dark: "dark",
-            },
-            attributeName: "class",
-        }),
-    ],
+    withThemeByClassName({
+      defaultTheme: "light",
+      themes: {
+        light: "light",
+        dark: "dark",
+      },
+    }),
+  ],
 };
 
 

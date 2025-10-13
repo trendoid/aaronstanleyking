@@ -50,14 +50,14 @@ export default function ContactPage() {
       <Schema schema={breadcrumbSchema} />
       <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
+      <section className="bg-gradient-to-br from-blue-50 via-background to-indigo-50 dark:from-blue-950 dark:via-background dark:to-indigo-950 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Mail className="w-16 h-16 text-blue-600 mx-auto mb-6" />
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
               Let&apos;s Connect
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               I&apos;m always interested in discussing new projects, creative ideas, 
               or opportunities to collaborate. Feel free to reach out!
             </p>
@@ -72,13 +72,13 @@ export default function ContactPage() {
             const Icon = method.icon
             return (
               <div key={method.name} className="text-center">
-                <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-blue-600" />
+                <div className="rounded-lg shadow-md border border-border bg-card p-6 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{method.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{method.description}</p>
-                  <p className="font-medium text-gray-900 mb-4">{method.value}</p>
+                  <h3 className="text-xl font-semibold text-card-foreground mb-2">{method.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-4">{method.description}</p>
+                  <p className="font-medium text-card-foreground mb-4">{method.value}</p>
                   <a
                     href={method.href}
                     className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
@@ -92,10 +92,10 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-8">
+        <div className="rounded-lg shadow-lg border border-border bg-card p-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Send a Message</h2>
-            <p className="text-gray-600">
+            <h2 className="text-3xl font-bold text-card-foreground mb-4">Send a Message</h2>
+            <p className="text-muted-foreground">
               Have a specific question or project in mind? Send me a message and I&apos;ll get back to you soon.
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                   Name *
                 </label>
                 <input
@@ -111,13 +111,13 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring"
                   placeholder="Your full name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
                   Email *
                 </label>
                 <input
@@ -125,14 +125,14 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring"
                   placeholder="your.email@example.com"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-card-foreground mb-2">
                 Subject *
               </label>
               <input
@@ -140,13 +140,13 @@ export default function ContactPage() {
                 id="subject"
                 name="subject"
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring"
                 placeholder="What's this about?"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
                 Message *
               </label>
               <textarea
@@ -154,7 +154,7 @@ export default function ContactPage() {
                 name="message"
                 rows={6}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
+                className="w-full px-4 py-2 border border-input bg-background text-foreground rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring resize-vertical"
                 placeholder="Tell me more about your project, question, or how I can help..."
               />
             </div>
@@ -167,8 +167,8 @@ export default function ContactPage() {
             </div>
           </form>
 
-          <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-            <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
+          <div className="mt-8 pt-8 border-t border-border text-center">
+            <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4" />
               <span>Based in Your Location • Available for remote work worldwide</span>
             </div>

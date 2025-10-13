@@ -73,7 +73,7 @@ export default function BlogPage() {
           <div className="lg:col-span-1">
             <div className="sticky top-8 space-y-8">
               {/* Search */}
-              <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+              <div className="rounded-lg shadow-md p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                   <Search className="w-5 h-5 mr-2" />
                   Search
@@ -90,7 +90,7 @@ export default function BlogPage() {
 
               {/* Tags */}
               {allTags.length > 0 && (
-                <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+                <div className="rounded-lg shadow-md p-6 border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                     <Tag className="w-5 h-5 mr-2" />
                     Tags
@@ -110,7 +110,7 @@ export default function BlogPage() {
               )}
 
               {/* About */}
-              <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+              <div className="rounded-lg shadow-md p-6 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">About This Blog</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   A modern blog about web development, cloud computing, and technology. 

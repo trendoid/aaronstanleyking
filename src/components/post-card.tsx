@@ -11,8 +11,8 @@ interface PostCardProps {
 
 export function PostCard({ post, featured = false }: PostCardProps) {
   const cardClasses = featured
-    ? 'bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300'
-    : 'bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300'
+    ? 'rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300'
+    : 'rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300'
 
   return (
     <article className={cardClasses}>
