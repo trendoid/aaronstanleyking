@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           storageKey="aaronstanleyking-theme"
         >
