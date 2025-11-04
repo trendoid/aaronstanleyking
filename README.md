@@ -1,10 +1,10 @@
 # Aaron Stanley King - Blog
 
-A modern blog built with Next.js 14, Storybook, and deployed on Azure Static Web Apps.
+A modern blog built with Next.js 15, Storybook, and deployed on Azure Static Web Apps.
 
 ## 🚀 Features
 
-- **Next.js 14** with App Router and TypeScript
+- **Next.js 15** with App Router and TypeScript
 - **Storybook** for component development and documentation
 - **Tailwind CSS** for responsive styling
 - **Markdown** blog posts with frontmatter
@@ -15,7 +15,7 @@ A modern blog built with Next.js 14, Storybook, and deployed on Azure Static Web
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 14 with App Router
+- **Framework:** Next.js 15 with App Router
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Content:** Markdown with gray-matter
@@ -40,6 +40,8 @@ npm install
 ```bash
 npm run dev
 ```
+
+   The development server uses Turbopack for faster builds and hot module replacement.
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
@@ -112,7 +114,7 @@ This project is configured for automatic deployment to Azure Static Web Apps.
 You can also deploy manually using the SWA CLI:
 
 ```bash
-# Build the application
+# Build the application (includes Storybook build)
 npm run build
 
 # Deploy to Azure (requires Azure login)
@@ -121,8 +123,8 @@ npm run swa:deploy
 
 ## 🔧 Development Commands
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
+- `npm run dev` - Start development server (with Turbopack)
+- `npm run build` - Build for production (includes Storybook build)
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 - `npm run storybook` - Start Storybook
@@ -168,7 +170,7 @@ The blog includes several reusable components documented in Storybook:
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
 
 ## 🤝 Contributing
 
@@ -176,10 +178,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Contact
 
-- **Website:** [Your Website]
-- **Email:** hello@example.com
 - **GitHub:** [@trendoid](https://github.com/trendoid)
-- **LinkedIn:** [Your LinkedIn]
 
 ---
 
